@@ -1,0 +1,14 @@
+{
+  "name": "Architecture Cards · AWS SAA",
+  "short_name": "Arch Cards",
+  "description": "Offline AWS Solutions Architect Associate flashcards",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ed",
+  "theme_color": "#142c2a",
+  "icons": [
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

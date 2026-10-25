@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#142c2a">
+  <meta name="description" content="150 practical AWS Solutions Architect Associate flashcards across all four domains.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Architecture Cards · AWS SAA</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">A<span>✦</span></span><span>Architecture<br><strong>Cards</strong></span></div>
+    <button class="text-button" id="settings-button" type="button" aria-label="Open deck settings">Settings <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">AWS CERTIFIED SOLUTIONS ARCHITECT · ASSOCIATE</p>
+      <h1 id="page-title">Think in tradeoffs.<br><em>Recall the right design.</em></h1>
+      <p class="lede">Short architecture decisions for the four SAA-C03 domains. Built for a focused review on your phone.</p>
+      <div class="stats" aria-label="Study progress">
+        <div><strong id="due-count">—</strong><span>due now</span></div>
+        <div><strong id="learned-count">—</strong><span>reviewed</span></div>
+        <div><strong>150</strong><span>cards</span></div>
+      </div>
+    </section>
+
+    <section class="study" aria-labelledby="study-title">
+      <div class="section-heading"><div><p class="eyebrow">THE REVIEW</p><h2 id="study-title">Your next decision</h2></div><span id="session-status" class="session-status"></span></div>
+      <div class="controls">
+        <div class="segmented" role="group" aria-label="Review mode">
+          <button id="mode-daily" class="selected" type="button" aria-pressed="true">Daily 12</button>
+          <button id="mode-browse" type="button" aria-pressed="false">Browse all</button>
+        </div>
+        <label class="select-wrap"><span class="sr-only">Filter domain</span><select id="domain-filter"><option value="all">All domains</option><option value="1">1 · Secure</option><option value="2">2 · Resilient</option><option value="3">3 · Performance</option><option value="4">4 · Cost</option></select></label>
+      </div>
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search topics or services" autocomplete="off"><span class="sr-only">Search cards</span></label>
+      <div id="card-region" aria-live="polite"></div>
+    </section>
+
+    <section class="domains" aria-labelledby="domains-title">
+      <div class="section-heading"><div><p class="eyebrow">THE BLUEPRINT</p><h2 id="domains-title">Four domains, one mindset</h2></div></div>
+      <div class="domain-grid">
+        <button type="button" data-pick-domain="1" class="domain-tile"><span class="tile-num">01</span><strong>Secure</strong><small>50 cards · access, network, data</small><span class="tile-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-pick-domain="2" class="domain-tile"><span class="tile-num">02</span><strong>Resilient</strong><small>30 cards · scaling, recovery</small><span class="tile-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-pick-domain="3" class="domain-tile"><span class="tile-num">03</span><strong>High-performing</strong><small>30 cards · storage, compute, data</small><span class="tile-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-pick-domain="4" class="domain-tile"><span class="tile-num">04</span><strong>Cost-optimized</strong><small>40 cards · measure the full path</small><span class="tile-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+    <footer><span>Made from your study guides · SAA-C03</span><a href="https://docs.aws.amazon.com/aws-certification/latest/solutions-architect-associate-03.html" target="_blank" rel="noopener">Official exam guide ↗</a></footer>
+  </main>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form method="dialog"><button class="close-button" aria-label="Close settings">×</button></form>
+    <p class="eyebrow">YOUR DECK</p><h2 id="settings-title">Settings & backup</h2>
+    <p>Progress stays in this browser on this device. Export a backup before clearing browser data or changing phones.</p>
+    <div class="settings-actions"><button id="export-progress" type="button">Export progress</button><button id="import-progress" type="button">Import progress</button><button id="export-cards" type="button">Export cards as CSV</button></div>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+    <p class="settings-note">Daily 12 picks up to twelve due cards. Again returns a card in one minute; Hard in one day; Good grows the interval with each review.</p>
+  </dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

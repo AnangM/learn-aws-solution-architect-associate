@@ -6,3 +6,9 @@ Study material from skill builder transcribe
 
 [AWS Services](services/README.md)
 AWS Services mentioned in the skill builder transcribe
+
+## Architecture Cards
+
+[Open the flashcard deck](https://anangm.github.io/learn-aws-solution-architect-associate/) after GitHub Pages is enabled. The source is in [`docs/`](docs/) and contains 150 cards across all four SAA-C03 domains. Review progress is stored in the browser and can be exported from Settings.
+
+To publish, push the `master` branch, then select **Settings → Pages → Deploy from a branch → master → /docs → Save** in this repository. The site does not require a build step. For a local preview, run `python3 -m http.server 8000 --directory docs` and open `http://localhost:8000/`.
